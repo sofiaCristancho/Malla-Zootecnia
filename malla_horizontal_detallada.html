@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Zootecnia - Horizontal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3e5f5; /* morado pastel */
+      margin: 0;
+      padding: 20px;
+      overflow-x: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #6a1b9a;
+    }
+    .malla {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+    .semestre {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      min-width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-top: 6px solid #ec407a;
+    }
+    .semestre h2 {
+      text-align: center;
+      color: #d81b60;
+      margin-bottom: 12px;
+    }
+    .materia {
+      background-color: #f8bbd0;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .materia:hover {
+      background-color: #f48fb1;
+    }
+    .materia.checked {
+      background-color: #b3e5fc !important;
+      color: #01579b;
+      text-decoration: line-through;
+    }
+    .materia .titulo {
+      font-weight: bold;
+    }
+    .materia small {
+      display: block;
+      font-size: 12px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular - Zootecnia UdeA</h1>
+  <div class="malla">
+    <div class="semestre">
+      <h2>1° Semestre</h2>
+      <div class="materia" onclick="toggle(this)" data-id="matematicas">
+        <div class="titulo">Matemáticas</div>
+        <small>Código: 5007550 | Créditos: 3</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="biologia">
+        <div class="titulo">Biología General</div>
+        <small>Código: 5007552 | Créditos: 3</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="quimica">
+        <div class="titulo">Química General</div>
+        <small>Código: 5007551 | Créditos: 3</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="informatica">
+        <div class="titulo">Informática</div>
+        <small>Código: 5007549 | Créditos: 2</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="comunicacion">
+        <div class="titulo">Habilidades de la Comunicación</div>
+        <small>Código: 5007641 | Créditos: 2</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="zootrad">
+        <div class="titulo">Introd. Esp. Zoot. Tradicionales</div>
+        <small>Código: 5007564 | Créditos: 3</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="ingles1">
+        <div class="titulo">Inglés 1</div>
+        <small>Código: 9050101 | Créditos: 2</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>2° Semestre</h2>
+      <div class="materia" onclick="toggle(this)" data-id="economia">
+        <div class="titulo">Economía</div>
+        <small>Código: 5007636 | Créditos: 3</small>
+        <small>Pre: Matemáticas | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="calculo">
+        <div class="titulo">Cálculo</div>
+        <small>Código: 5007553 | Créditos: 3</small>
+        <small>Pre: Matemáticas | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="orgquimica">
+        <div class="titulo">Química Orgánica</div>
+        <small>Código: 5007555 | Créditos: 3</small>
+        <small>Pre: Química General | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="microbiologia">
+        <div class="titulo">Microbiología</div>
+        <small>Código: 5007563 | Créditos: 3</small>
+        <small>Pre: Biología General | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="zootnotrad">
+        <div class="titulo">Introd. Esp. Zoot. No Tradicionales</div>
+        <small>Código: 5007565 | Créditos: 3</small>
+        <small>Pre: Ninguno | Co: Ninguno</small>
+      </div>
+      <div class="materia" onclick="toggle(this)" data-id="ingles2">
+        <div class="titulo">Inglés 2</div>
+        <small>Código: 9050102 | Créditos: 2</small>
+        <small>Pre: Inglés 1 | Co: Ninguno</small>
+      </div>
+    </div>
+    <!-- Continúa agregando más semestres si es necesario -->
+  </div>
+
+  <script>
+    function toggle(el) {
+      el.classList.toggle("checked");
+    }
+  </script>
+</body>
+</html>
